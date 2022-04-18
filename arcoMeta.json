@@ -1,0 +1,23 @@
+{
+  "name": "qcraft-comp",
+  "title": "标准组件库",
+  "description": "",
+  "type": "react-library",
+  "category": [],
+  "group": 0,
+  "homepage": "",
+  "repository": "",
+  "author": "iamjbw",
+  "screenshot": "",
+  "package": {
+    "name": "qcraft-comp",
+    "version": "latest",
+    "type": "npm",
+    "registry": "",
+    "peerDependencies": [
+      "react",
+      "react-dom",
+      "@arco-design/web-react"
+    ]
+  }
+}

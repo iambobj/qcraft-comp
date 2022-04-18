@@ -1,0 +1,507 @@
+.arco-spin-children::after {
+  z-index: 999;
+}
+
+.arco-btn {
+  line-height: 1.5715 !important;
+}
+
+.arco-btn-primary:not(.arco-btn-disabled) {
+  background: #1664ff;
+}
+
+.arco-btn-size-default svg {
+  vertical-align: -2px !important;
+}
+
+.arco-btn-secondary:not(.arco-btn-disabled) {
+  background-color: #f2f3f8 !important;
+  color: #1d2129;
+}
+
+.arco-btn-secondary:not(.arco-btn-disabled):not(.arco-btn-loading):hover {
+  color: #1d2129;
+}
+
+.arco-radio-group .arco-radio {
+  white-space: nowrap;
+}
+
+/*
+input select textarea start
+*/
+.arco-input-inner-wrapper,
+.arco-textarea {
+  background: #f2f3f8 !important;
+
+  &:hover {
+    background: #E5E8EF !important;
+  }
+
+  &:focus-within {
+    background: #fff !important;
+  }
+}
+
+.form-hide-require-style {
+  .arco-form-item-symbol {
+    display: none;
+  }
+}
+
+/*
+input select textarea end
+*/
+
+.common-link {
+  color: #1664ff !important;
+}
+
+.common-style-form {
+  .arco-form-label-item>label {
+    font-size: 13px;
+  }
+
+  .arco-form-item>.arco-form-label-item {
+    width: 92px;
+  }
+
+  .arco-form-item>.arco-form-item-wrapper {
+    flex: 1;
+  }
+}
+
+/* form start */
+.arco-form-label-item {
+  text-align: left;
+
+  >label {
+    color: #424e66 !important;
+  }
+}
+
+.arco-form {
+  .arco-row {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.arco-table .arco-table-th:first-child,
+.arco-table .arco-table-th:last-child {
+  border-radius: 0;
+}
+
+/* form end */
+.arco-table-th.arco-table-col-sorted {
+  background-color: var(--color-neutral-2) !important;
+}
+
+.arco-table-th-item.arco-table-cell-mouseenter {
+  background-color: var(--color-neutral-2) !important;
+}
+
+.arco-table-td.arco-table-col-sorted {
+  background-color: var(--color-bg-2);
+}
+
+.arco-card-body {
+  border-radius: 4px;
+}
+
+/*
+start modal
+*/
+.arco-modal-header .arco-modal-title {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/*
+end modal
+*/
+
+/*
+start menu 
+*/
+.layout .header {
+  .arco-menu {
+    font-family: 'PingFangSC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+
+    .arco-menu-inner {
+      padding: 10px 20px;
+      overflow: hidden;
+
+      .arco-menu-icon-suffix {
+        margin-left: 12px;
+
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      .arco-menu-selected {
+        color: #468dff;
+        font-weight: 600;
+
+        svg {
+          color: #468dff !important;
+        }
+      }
+    }
+
+    .menuitem:not(.arco-menu-selected) {
+      &:hover {
+        color: white;
+      }
+    }
+
+    .arco-menu-selected-label {
+      bottom: -10px;
+    }
+  }
+}
+
+.arco-table-sorter {
+  /*height: 8px;
+  .arco-icon {
+    width: 8px;
+    height: 8px;
+  }*/
+  transform: scale(0.8);
+}
+
+.arco-table-sorter-icon {
+  // height: 5px;
+  // line-height: 5px;
+}
+
+.arco-table-sorter {
+  // height: 8px;
+  margin-left: 12px;
+
+  .arco-icon {
+    color: #4e5969;
+  }
+
+  transform: scale(0.6);
+}
+
+/*
+end menu
+*/
+
+/*
+start table 过滤器、排序按钮
+*/
+.arco-table-filters:hover,
+.arco-table-filters-open {
+  background: transparent;
+}
+
+.arco-table-filters {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: -2px;
+  position: initial;
+
+  svg {
+    font-size: 14px;
+  }
+}
+
+.arco-table-filters-list {
+  padding: 8px 0 4px;
+}
+
+.arco-table-custom-filter {
+  padding: 10px;
+  background-color: var(--color-bg-5);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.arco-table-filter-column,
+.arco-table-column-sorters {
+  justify-content: flex-start;
+}
+
+.arco-table-column-title {
+  flex: 0 0 auto;
+}
+
+.arco-table-column-sorter {
+  margin-left: 8px;
+}
+
+.arco-table-column-sorter-up,
+.arco-table-column-sorter-down {
+  font-size: 9px;
+}
+
+.arco-table-filter-trigger {
+  padding: 0;
+  margin-left: 8px;
+}
+
+.arco-table-border .arco-table-container .arco-table-expand-fixed-row {
+  border-left: 0;
+}
+
+.arco-table-filters-btn {
+  justify-content: end;
+}
+
+/*
+end table 过滤器、排序按钮
+*/
+
+/*
+* table 复选框
+*/
+.arco-table-cell .arco-checkbox-inner {
+  border: 2px solid #c9cdd4;
+  border-radius: 2px;
+  /*width: 14px;
+  height: 14px;
+  &:after {
+    width: 4.714px;
+    height: 7.14px;
+  }*/
+}
+
+.arco-table {
+  line-height: 20px;
+}
+
+.arco-table .arco-table-th {
+  font-weight: 600 !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.arco-table-content-inner tr>td {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  line-height: 20px !important;
+  border-bottom-color: #e5e8ef !important;
+  font-weight: 500;
+
+  .arco-table-cell {
+    height: 20px;
+  }
+}
+
+.arco-pagination {
+  &.mini {
+    .arco-select-arrow {
+      font-size: 9px;
+      color: #4e5969;
+    }
+
+    .arco-pagination-prev,
+    .arco-pagination-next,
+    .arco-pagination-jump-next-custom-icon,
+    .arco-pagination-jump-prev-custom-icon,
+    .arco-pagination-item {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .arco-pagination-item {
+      background: #e8f4ff;
+      border-radius: 2px;
+      font-weight: 400;
+      border: 0;
+    }
+
+    .arco-pagination-item-active {
+      border: none;
+    }
+
+    .arco-select-selection-item {
+      font-weight: 400;
+      line-height: 32px !important;
+    }
+
+    .arco-select-selector {
+      padding: 0 8px !important;
+    }
+
+    .arco-pagination-item-link {
+      font-size: 9px;
+    }
+  }
+}
+
+.arco-table-cell .arco-tag {
+  font-weight: 500;
+}
+
+.arco-table-thead>tr>th {
+  font-family: PingFangSC-Medium !important;
+  font-weight: 500;
+  background-color: #f2f3f8;
+  color: #1d2129;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom-color: #e5e8ef;
+
+  &::before {
+    display: none;
+  }
+}
+
+/*
+start Card
+*/
+.arco-card-actions {
+  height: 40px;
+}
+
+.arco-card-size-default .arco-card-header {
+  padding: 20px;
+  padding-bottom: 16px;
+  height: auto;
+
+  .arco-card-header-title {
+    height: 24px;
+    font-weight: 600;
+  }
+}
+
+.arco-card-size-default .arco-card-body {
+  padding: 20px;
+}
+
+/*
+end Card
+*/
+
+/*
+start tab
+*/
+.arco-tabs-header-wrapper {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+  .arco-tabs-header {
+    margin-left: 8px;
+
+    .arco-tabs-header-title-text {
+      font-family: PingFangSC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .arco-tabs-header-title-active {
+    .arco-tabs-header-title-text {
+      font-family: PingFangSC-Medium;
+    }
+  }
+}
+
+.arco-tabs-content {
+  padding-top: 20px;
+  background-color: #f2f3f8;
+}
+
+/*
+end tab
+*/
+
+/*
+start pageheader
+*/
+.arco-page-header-head {
+  .arco-page-header-back {
+    font-size: 14px;
+    margin-top: 4px;
+
+    &::before {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  }
+}
+
+.arco-textarea {
+  &:focus {
+    background-color: var(--color-bg-2) !important;
+  }
+}
+
+/*
+end pageheader
+*/
+
+/*
+alert start
+*/
+.arco-alert {
+  min-height: 54px;
+  font-family: 'PingFangSC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+  .arco-alert-content {
+    color: #4E5969 !important;
+  }
+
+  .arco-alert-icon-wrapper {
+    width: 18px;
+    height: 18px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*
+alert end
+*/
+
+/*
+start radio-button
+*/
+.arco-radio-group-type-button {
+  line-height: 22px;
+  font-weight: 500;
+  font-family: PingFangSC;
+
+  .arco-radio-button.arco-radio-checked {
+    font-family: PingFangSC-Medium;
+  }
+
+  .arco-radio-button-inner {
+    font-size: 14px !important;
+  }
+}
+
+/*
+end radio-button
+*/
+
+/*
+message start
+*/
+.arco-message-wrapper-top {
+  top: 28px !important;
+}
+
+/*
+message end
+*/

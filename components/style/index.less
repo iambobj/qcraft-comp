@@ -1,1 +1,310 @@
-// 全局样式
+@import './arcoCover.less';
+
+@font-face {
+  font-display: swap;
+  font-family: 'PingFangSC';
+  src: url('http://180.184.70.106:8080/PingFangSC-Regular.otf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'PingFangSC-Medium';
+  src: url('http://180.184.70.106:8080/PingFangSC-Medium.otf');
+}
+
+@font-size-base: 12px;
+@font-size-body-3: 12px;
+@color-warning-light-1: #FFFAE8;
+
+:root {
+  --overview-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  --overview-card-bg: #fff;
+  --project-btn-margin: calc((100% - 1200px) / 2);
+}
+
+#app {
+  font-size: 12px !important;
+  font-weight: 400;
+  font-family: PingFangSC !important;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+html,
+body {
+  color: red !important;
+  min-height: 100%;
+  background: #f2f3f8;
+}
+
+/*
+* start 定制滚动条
+*/
+body {
+  overflow: overlay;
+  font-family: PingFangSC !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*
+* end 定制滚动条
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: unset !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: baseline !important;
+}
+
+.common-table-style-small {
+  .arco-table-content-inner tr>td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &.arco-table .arco-table-th:first-child,
+  .arco-table .arco-table-th:last-child {}
+
+  &.arco-table .arco-table-th:last-child {}
+}
+
+.ellipsis-line-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.ellipsis-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cardTitle {
+  font-family: PingFangSC-Medium !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #1d2129;
+}
+
+.subText {
+  font-family: PingFangSC !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #000000;
+}
+
+.mileText {
+  font-family: PingFangSC-Medium !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FA9600;
+}
+
+.detailSubTitle {
+  font-family: PingFangSC-Medium !important;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.detailInfoFont {
+  font-family: PingFangSC-Medium !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.light-color-selector {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
+  .arco-select-view {
+    background: #ffffff !important;
+  }
+}
+
+.form-modal {
+  .arco-modal-header .arco-modal-title {
+    font-size: 14px;
+    color: #1d2129;
+    font-weight: 600;
+    text-align: left;
+    font-family: PingFangSC-Medium !important;
+  }
+}
+
+.visualization-popover {
+  .arco-popover-content {
+    width: 775px;
+    padding: 10px;
+  }
+}
+
+.composite-filter-dropdown {
+  .arco-menu-inner {
+    font-size: 12px;
+  }
+}
+
+.confirm-dialog {
+  .ant-modal-footer {
+    border-top: 0;
+    text-align: center;
+  }
+}
+
+.common-confirm-dialog {
+  width: 374px !important;
+  padding-bottom: 24px !important;
+
+  .arco-modal-header {
+    margin-bottom: 20px !important;
+  }
+
+  .arco-modal-title {
+    text-align: center !important;
+  }
+
+  .arco-modal-content {
+    text-align: center;
+  }
+
+  .arco-modal-title .arco-icon-info-circle-fill {
+    vertical-align: -4px !important;
+  }
+
+  .arco-modal-footer {
+    margin-top: 20px !important;
+  }
+}
+
+.empty-table-not-scroll {
+  .arco-table-content-inner {
+    overflow: hidden !important;
+  }
+}
+
+.font-500 {
+  font-weight: 500 !important;
+}
+
+.g2-tooltips-light {
+  font-family: PingFangSC !important;
+  padding: 8px !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  background: linear-gradient(304.17deg, rgba(253, 254, 255, 0.6) -6.04%, rgba(244, 247, 252, 0.6) 85.2%) !important;
+
+  .title {
+    font-family: PingFangSC-Medium !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    color: #1D2129 !important;
+    margin: 0 6px !important;
+  }
+
+  .tooltip-item:not(.tooltip-item-single), .content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 6px 0px 20px rgba(34, 87, 188, 0.1);
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin: 4px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .marker {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    .content-title {
+      width: 80px;
+      margin-right: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #4E5969;
+    }
+
+    .content-value {
+      width: 50px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15px;
+      color: #1D2129;
+      text-align: right;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.error-message-wrap {
+  padding: 6px 10px 6px 12px;
+  background: #F2F3F8;
+  border-radius: 2px;
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #1D2129;
+}
