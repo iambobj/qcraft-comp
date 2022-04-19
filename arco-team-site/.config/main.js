@@ -6,19 +6,19 @@ module.exports = {
     // 匹配文档和组件的路径
     globs: {
       // 可用于 Arco Monorepo 模板的配置
-      component: {
-        base: '../*',
-        doc: 'docs/README.md',
-        demo: 'src/demo/index.js',
-        style: 'src/style/index.less',
-      },
-      // 可用于 Arco 物料库模板的配置
       // component: {
-      //   base: '../components/*',
-      //   doc: 'README.md',
-      //   demo: 'demo/index.js',
-      //   style: 'style/index.less',
+      //   base: '../*',
+      //   doc: 'docs/README.md',
+      //   demo: 'src/demo/index.js',
+      //   style: 'src/style/index.less',
       // },
+      // 可用于 Arco 物料库模板的配置
+      component: {
+        base: '../components/*',
+        doc: 'README.md',
+        demo: 'demo/index.js',
+        style: 'style/index.less',
+      },
       // 可用于 Arco 工具库模板的配置
       // component: {
       //   base: '../src/*',
