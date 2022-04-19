@@ -1,0 +1,32 @@
+.filter-tag {
+  display: flex;
+  background: #e5e8ef;
+  border-radius: 2px;
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 8px;
+  &.active {
+    background: transparent;
+    padding-right: 0;
+    .tag-close-icon {
+      display: none;
+    }
+  }
+  .tag-wrap {
+    display: flex;
+  }
+  .tag-active {
+    display: flex;
+    align-items: center;
+  }
+  .tag-name {
+    margin-right: 8px;
+  }
+  .tag-close-icon {
+    margin-left: 8px;
+    font-size: 9px;
+  }
+}

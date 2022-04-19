@@ -1,0 +1,118 @@
+.compositer-filter {
+  height: 32px;
+  background: rgba(242, 243, 248, 0.5);
+  border: 1px solid #c9cdd4;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  &.active {
+    border-color: #1664ff;
+    background-color: #fff;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .search-icon {
+    margin-right: 16px;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .suffix-condition {
+    .suffix-content {
+      display: inline-block;
+      position: relative;
+      min-width: 2px;
+      height: 30px;
+      vertical-align: middle;
+
+      .suffix-input {
+        background-color: transparent;
+      }
+    }
+
+    .placeholder {
+      display: inline-block;
+      color: #86909c;
+      line-height: 30px;
+      height: 30px;
+    }
+
+    .composition-search-drop-multiple {
+      background: #ffffff;
+      border: 1px solid #e5e6e8;
+      box-shadow: 0px 4px 10px rgb(0 0 0 / 10%);
+      border-radius: 4px;
+      position: relative;
+      min-width: 128px;
+      padding-bottom: 40px;
+      position: absolute;
+      left: 0;
+      top: 35px;
+      z-index: 5;
+    }
+  }
+
+  .suffix-dropdown {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.suffix-title {
+  margin-right: 8px;
+  padding-left: 8px;
+}
+
+.suffix-dropdown-content {
+  .filter-type-list {
+    background-color: #fff;
+    border: 1px solid #e5e6eb;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 4px 0;
+
+    .arco-menu-inner {
+      padding: 0;
+    }
+  }
+
+  .filter-type-item {
+    height: 36px;
+    min-width: 100px;
+    line-height: 36px;
+    text-indent: 0px;
+    padding: 0;
+    color: #1d2129 !important;
+
+    &.arco-menu-selected {
+      background: #f2f3f8 !important;
+      color: #1d2129 !important;
+    }
+
+    cursor: pointer;
+
+    &:hover {
+      background: #f2f3f8;
+      color: #1d2129;
+    }
+  }
+}

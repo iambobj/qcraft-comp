@@ -1,0 +1,22 @@
+.input-filter {
+  position: relative;
+  margin-left: 5px;
+  min-width: 2px;
+  display: inline-block;
+  &.active {
+    height: 100%;
+    line-height: 80px; // 为了人文字溢出，这样用户看不到文字
+
+    .real-input {
+      visibility: visible;
+    }
+  }
+  .real-input {
+    background: transparent;
+    font-size: 12px;
+    margin-left: 2px;
+    display: block;
+    visibility: hidden;
+    min-width: 2px;
+  }
+}

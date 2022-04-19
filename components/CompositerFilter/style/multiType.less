@@ -1,0 +1,63 @@
+.composite-filter-dropdown-checkboxgroup {
+  min-width: 128px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #e5e6eb;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.compositer-multi-type-list {
+  padding: 0 12px !important;
+  max-height: 500px;
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: auto;
+    padding-right: 8px !important;
+  }
+
+  .compositer-multi-type-item {
+    display: flex;
+    align-items: center;
+    margin-left: 0 !important;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+  }
+}
+
+.multi-type-btns {
+  display: flex;
+  padding: 8px 12px;
+  background: #fff;
+  border-top: 1px solid #e5e8ef;
+  justify-content: flex-end;
+
+  .multi-type-btn {
+    &:nth-last-child(n + 2) {
+      margin-right: 8px;
+    }
+  }
+}
+
+/*
+.input-filter {
+  position: relative;
+  &.active {
+    display: inline-block;
+    height: 100%;
+    line-height: 80px; // 为了人文字溢出，这样用户看不到文字
+    min-width: 2px;
+    margin-right: 2px;
+    .real-input {
+      background: transparent;
+      display: block;
+    }
+  }
+  .real-input {
+    display: none;
+  }
+}
+*/

@@ -17,8 +17,8 @@ module.exports = {
 
     config.testPathIgnorePatterns = ['/node_modules/', '/scripts/'];
     config.moduleNameMapper = {
-      '^Qcraft-comp/(.+)$': '<rootDir>/$1',
-      '^Qcraft-comp$': '<rootDir>',
+      '^qcraft-comp/(.+)$': '<rootDir>/$1',
+      '^qcraft-comp$': '<rootDir>',
     };
   },
   /**
@@ -44,8 +44,8 @@ module.exports = {
       '/components/locale/',
     ];
     config.moduleNameMapper = {
-      '^Qcraft-comp/(.+)$': '<rootDir>/$1',
-      '^Qcraft-comp$': '<rootDir>',
+      '^qcraft-comp/(.+)$': '<rootDir>/$1',
+      '^qcraft-comp$': '<rootDir>',
     };
   },
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from 'Qcraft-comp';
+import { Select } from 'qcraft-comp';
 
 export default () => {
   const options = [

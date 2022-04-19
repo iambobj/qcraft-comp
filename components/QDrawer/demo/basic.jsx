@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from '@arco-design/web-react'
-import { QDrawer } from 'Qcraft-comp';
+import { QDrawer } from 'qcraft-comp';
 
 export default () => {
   const [viewDetail, setDetailVisiable] = useState(false)
