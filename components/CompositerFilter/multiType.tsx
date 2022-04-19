@@ -1,10 +1,8 @@
+// @ts-nocheck
 import { Dropdown, Button, Checkbox } from '@arco-design/web-react';
 import React, { useState, useEffect, useRef } from 'react';
 import { IMultipleItem } from '.';
-import {
-  CONTAINER_CLASS_NAME,
-  COMMON_DROPDOWN_CLASS_NAME,
-} from '.';
+import { CONTAINER_CLASS_NAME, COMMON_DROPDOWN_CLASS_NAME } from '.';
 import './style/index';
 interface IMultiFilter {
   value?: string[];
@@ -41,11 +39,8 @@ const MultiFilterType = React.forwardRef<HTMLInputElement, IMultiFilter>(
     useEffect(() => {
       const hide = (e: Event) => {
         const target = e.target;
-        const container =
-          document.getElementsByClassName(CONTAINER_CLASS_NAME)[0];
-        const dropdowner = document.getElementsByClassName(
-          COMMON_DROPDOWN_CLASS_NAME,
-        )[0];
+        const container = document.getElementsByClassName(CONTAINER_CLASS_NAME)[0];
+        const dropdowner = document.getElementsByClassName(COMMON_DROPDOWN_CLASS_NAME)[0];
         const inContainer = container?.contains(target);
         const inDropdown = dropdowner?.contains(target);
         if (!inContainer && !inDropdown) {
@@ -105,11 +100,7 @@ const MultiFilterType = React.forwardRef<HTMLInputElement, IMultiFilter>(
               <Button onClick={onCancel} className="multi-type-btn">
                 取消
               </Button>
-              <Button
-                type="primary"
-                className="multi-type-btn"
-                onClick={onConfirm}
-              >
+              <Button type="primary" className="multi-type-btn" onClick={onConfirm}>
                 确认
               </Button>
             </div>
@@ -129,7 +120,7 @@ const MultiFilterType = React.forwardRef<HTMLInputElement, IMultiFilter>(
         </span>
       </Dropdown>
     );
-  },
+  }
 );
 
 export default MultiFilterType;

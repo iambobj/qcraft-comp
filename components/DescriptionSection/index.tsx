@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Card, Grid, Typography } from '@arco-design/web-react';
-import './style/index'
+import './style/index';
 
 const { Paragraph } = Typography;
 const { Col, Row } = Grid;
@@ -27,15 +27,24 @@ const DescriptionSection: FC<{
       const first = fields[rowIndex * 2];
       const second = fields[rowIndex * 2 + 1];
       return (
-        <Row className="detailInfoFont" style={{ marginBottom: isLastRow ? 0 : '10px' }} key={rowIndex}>
+        <Row
+          className="detailInfoFont"
+          style={{ marginBottom: isLastRow ? 0 : '10px' }}
+          key={rowIndex}
+        >
           {first ? (
             <>
               <Col span={3} style={{ color: '#4E5969' }}>
                 {fields[rowIndex * 2].title}
               </Col>
               <Col span={9}>
-                <Paragraph ellipsis={{ rows: 1, expandable: true }} style={{ marginBottom: 0, marginRight: 50 }}>
-                  {first.render ? first['render'](data[first.dataIndex]) : data[first.dataIndex] || '--'}
+                <Paragraph
+                  ellipsis={{ rows: 1, expandable: true }}
+                  style={{ marginBottom: 0, marginRight: 50 }}
+                >
+                  {first.render
+                    ? first['render'](data[first.dataIndex])
+                    : data[first.dataIndex] || '--'}
                 </Paragraph>
               </Col>
             </>
@@ -47,15 +56,17 @@ const DescriptionSection: FC<{
               </Col>
               <Col span={9}>
                 <Paragraph ellipsis={{ rows: 1, expandable: true }} style={{ marginBottom: 0 }}>
-                  {second.render ? second['render'](data[second.dataIndex]) : data[second.dataIndex] || '--'}
+                  {second.render
+                    ? second['render'](data[second.dataIndex])
+                    : data[second.dataIndex] || '--'}
                 </Paragraph>
               </Col>
             </>
           ) : null}
         </Row>
       );
-    })
-  }
+    });
+  };
 
   const renderBlock = () => {
     const rowCount = fields.length;
@@ -63,24 +74,29 @@ const DescriptionSection: FC<{
       const isLastRow = rowIndex === rowCount - 1;
       const fieldItem = fields[rowIndex];
       return (
-        <Row className="detailInfoFont" style={{ marginBottom: isLastRow ? 0 : '10px' }} key={rowIndex}>
+        <Row
+          className="detailInfoFont"
+          style={{ marginBottom: isLastRow ? 0 : '10px' }}
+          key={rowIndex}
+        >
           <Col span={3} style={{ color: '#4E5969' }}>
             {fieldItem.title}
           </Col>
           <Col span={9}>
-            <Paragraph ellipsis={{ rows: 1, expandable: true }} style={{ marginBottom: 0, marginRight: 50 }}>
-              {fieldItem.render ? fieldItem['render'](data[fieldItem.dataIndex]) : data[fieldItem.dataIndex] || '--'}
+            <Paragraph
+              ellipsis={{ rows: 1, expandable: true }}
+              style={{ marginBottom: 0, marginRight: 50 }}
+            >
+              {fieldItem.render
+                ? fieldItem['render'](data[fieldItem.dataIndex])
+                : data[fieldItem.dataIndex] || '--'}
             </Paragraph>
           </Col>
         </Row>
-      )
-    })
-  }
-  return (
-    <Card {...getCardConfig(title)}>
-      {type === 'block' ? renderBlock() : renderFlex()}
-    </Card>
-  );
+      );
+    });
+  };
+  return <Card {...getCardConfig(title)}>{type === 'block' ? renderBlock() : renderFlex()}</Card>;
 };
 
 export default DescriptionSection;

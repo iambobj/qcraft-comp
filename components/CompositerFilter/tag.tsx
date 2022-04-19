@@ -1,5 +1,5 @@
 import { IconClose } from '@arco-design/web-react/icon';
-import { Tag, Tooltip } from '@arco-design/web-react';
+import { Tooltip } from '@arco-design/web-react';
 import React, { FC, useState, useEffect, useRef } from 'react';
 import './tag.less';
 import InputFilterType from './inputType';
@@ -16,15 +16,10 @@ interface ITag {
 }
 const FilterTag: FC<ITag> = ({ type, label, value, name, onModify, onRemove, children }) => {
   const tagWrapRef = useRef<HTMLDivElement | null>(null);
-  const [inputValue, setInputValue] = useState(value);
   const [active, setActive] = useState(false);
-  const tagRef = useRef<any>();
-
-  const removeTag = () => {};
 
   useEffect(() => {
-    tagWrapRef.current?.addEventListener('click', (e) => {
-      // e.stopPropagation();
+    tagWrapRef.current?.addEventListener('click', () => {
       setActive(true);
     });
   }, []);
@@ -70,8 +65,7 @@ const FilterTag: FC<ITag> = ({ type, label, value, name, onModify, onRemove, chi
             )}
             <IconClose
               className="tag-close-icon"
-              onClick={(e) => {
-                // e.stopPropagation();
+              onClick={() => {
                 onRemove(name);
               }}
             />

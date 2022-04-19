@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Dropdown, Menu } from '@arco-design/web-react';
 import { IconSearch } from '@arco-design/web-react/icon';
 import React, { useRef, FC, useState, useEffect } from 'react';
@@ -44,19 +45,14 @@ const CompositerFilter: FC<ICompositerFilter> = ({
   style = {},
 }) => {
   const [tags, setTags] = useState<ITag[]>([]);
-  const [activeFilterInfo, setActiveFilterInfo] = useState<IFilter | null>(
-    null,
-  );
+  const [activeFilterInfo, setActiveFilterInfo] = useState<IFilter | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const placeholderRef = useRef<HTMLSpanElement | null>(null);
   const suffixInputRef = useRef<HTMLInputElement | null>(null);
-  const [defaultSuffixInputActive, setDefaultSuffixInputActive] =
-    useState(false);
+  const [defaultSuffixInputActive, setDefaultSuffixInputActive] = useState(false);
   const suffixInputFiterTypeRef = useRef<HTMLInputElement | null>(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const defaultFilterInfo = filters.find(
-    (filter) => filter.name === defaultFilterName,
-  );
+  const defaultFilterInfo = filters.find((filter) => filter.name === defaultFilterName);
   const PLACEHOLDER = {
     empty: `默认按${defaultFilterInfo?.label}搜索`,
     waitingValue: '请输入回车确认',
@@ -76,11 +72,7 @@ const CompositerFilter: FC<ICompositerFilter> = ({
   useEffect(() => {
     contentRef.current?.addEventListener('click', (e) => {
       // e.stopPropagation();
-      const triggeerDom = [
-        contentRef.current,
-        suffixInputRef.current,
-        placeholderRef.current,
-      ];
+      const triggeerDom = [contentRef.current, suffixInputRef.current, placeholderRef.current];
       if (e.target === contentRef.current) {
         console.log('suffixInputFiterTypeRef focus');
         suffixInputFiterTypeRef.current?.focus();
@@ -96,9 +88,7 @@ const CompositerFilter: FC<ICompositerFilter> = ({
   useEffect(() => {
     const hide = (e: Event) => {
       const target = e.target;
-      const dropdowner = document.getElementsByClassName(
-        COMMON_DROPDOWN_CLASS_NAME,
-      )[0];
+      const dropdowner = document.getElementsByClassName(COMMON_DROPDOWN_CLASS_NAME)[0];
       const inDropdown = dropdowner?.contains(target);
       if (
         // target?.className !== suffixInputRef.current?.className &&
@@ -115,11 +105,8 @@ const CompositerFilter: FC<ICompositerFilter> = ({
     };
     const switchContainerStatus = (e: Event) => {
       const target = e.target;
-      const container =
-        document.getElementsByClassName(CONTAINER_CLASS_NAME)[0];
-      const dropdowner = document.getElementsByClassName(
-        COMMON_DROPDOWN_CLASS_NAME,
-      )[0];
+      const container = document.getElementsByClassName(CONTAINER_CLASS_NAME)[0];
+      const dropdowner = document.getElementsByClassName(COMMON_DROPDOWN_CLASS_NAME)[0];
       const inContainer = container?.contains(target);
       const inDropdown = dropdowner?.contains(target);
       if (inContainer) {
@@ -254,14 +241,7 @@ const CompositerFilter: FC<ICompositerFilter> = ({
     <div className={CONTAINER_CLASS_NAME} style={style}>
       <div className="content " ref={contentRef}>
         {tags.map((tag, index) => {
-          return (
-            <FilterTag
-              {...tag}
-              onModify={onModify}
-              onRemove={onRemove}
-              key={tag.value}
-            />
-          );
+          return <FilterTag {...tag} onModify={onModify} onRemove={onRemove} key={tag.value} />;
         })}
         <div className="suffix-condition">
           <Dropdown
@@ -269,9 +249,7 @@ const CompositerFilter: FC<ICompositerFilter> = ({
             position="bl"
             droplist={
               filtersCanUse.length ? (
-                <div
-                  className={`suffix-dropdown-content ${COMMON_DROPDOWN_CLASS_NAME}`}
-                >
+                <div className={`suffix-dropdown-content ${COMMON_DROPDOWN_CLASS_NAME}`}>
                   <Menu
                     className="filter-type-list"
                     defaultSelectedKeys={[defaultFilterInfo?.name as string]}

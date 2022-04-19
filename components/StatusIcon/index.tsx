@@ -6,11 +6,11 @@ import {
   IconCloseCircleFill,
   IconLoading,
   IconExclamationCircleFill,
-} from "@arco-design/web-react/icon";
-import './style/index'
+} from '@arco-design/web-react/icon';
+import './style/index';
 
 interface SettingProps {
-  style?:  CSSProperties
+  style?: CSSProperties;
   content: string | ReactNode;
   type: string;
 }
@@ -20,7 +20,7 @@ interface IconConfig {
 }
 
 export function StatusIcon(props: SettingProps) {
-  const { type, content, style:  propsStyle } = props;
+  const { type, content, style: propsStyle } = props;
   const commonIcon: IconConfig = {
     processing: (
       <span className="status-icon-wrap" style={{ color: '#286af4', ...propsStyle }}>
@@ -47,11 +47,11 @@ export function StatusIcon(props: SettingProps) {
       </span>
     ),
     warning: (
-      <span className="status-icon-wrap" style={{ color: '#FA9600' , ...propsStyle}}>
+      <span className="status-icon-wrap" style={{ color: '#FA9600', ...propsStyle }}>
         <IconExclamationCircleFill />
         &nbsp;{content}
       </span>
-    )
+    ),
   };
   // 需要做占比表示
   if (type === 'processing' && typeof content === 'string') {
@@ -60,20 +60,26 @@ export function StatusIcon(props: SettingProps) {
     const secNum = +numArray[1];
     const per = (firstNum / secNum) * 100;
     const format = () => {
-      return <>
-        <span style={{ color: '#286af4' }}>{firstNum}</span> / <span style={{ color: '#363e4d' }}>{secNum}</span>
-      </>
-    }
+      return (
+        <>
+          <span style={{ color: '#286af4' }}>{firstNum}</span> /{' '}
+          <span style={{ color: '#363e4d' }}>{secNum}</span>
+        </>
+      );
+    };
     const viewProgress = content.indexOf('/') >= 0;
     return (
       <>
-        <span className="status-icon-wrap progress-line-wrap" style={{ color: '#286af4', ...propsStyle }}>
+        <span
+          className="status-icon-wrap progress-line-wrap"
+          style={{ color: '#286af4', ...propsStyle }}
+        >
           <span>
-            <IconLoading />&nbsp;运行中
+            <IconLoading />
+            &nbsp;运行中
             {viewProgress && <Progress percent={per} size="small" formatText={format} />}
           </span>
         </span>
-
       </>
     );
   }

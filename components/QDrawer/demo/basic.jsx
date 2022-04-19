@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {Button} from '@arco-design/web-react'
+import React, { useState } from 'react';
+import { Button } from '@arco-design/web-react';
 import { QDrawer } from 'qcraft-comp';
 
 export default () => {
-  const [viewDetail, setDetailVisiable] = useState(false)
+  const [viewDetail, setDetailVisiable] = useState(false);
   function handleViewDetail() {
-    setDetailVisiable(!viewDetail)
+    setDetailVisiable(!viewDetail);
   }
   const drawerConfig = {
     mask: true,
@@ -14,11 +14,19 @@ export default () => {
     visible: viewDetail,
     closable: true,
     footer: null,
-    onCancel: handleViewDetail
-  }
+    onCancel: handleViewDetail,
+  };
 
-  return <>
-  <Button onClick={() => { setDetailVisiable(!viewDetail)}}>展示抽屉</Button>
-  <QDrawer {...drawerConfig} />
-  </>
+  return (
+    <>
+      <Button
+        onClick={() => {
+          setDetailVisiable(!viewDetail);
+        }}
+      >
+        展示抽屉
+      </Button>
+      <QDrawer {...drawerConfig} />
+    </>
+  );
 };

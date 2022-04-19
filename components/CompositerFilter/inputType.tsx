@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useState, useEffect, useRef } from 'react';
 import './style/index';
 interface IInputFilter {
@@ -56,7 +57,7 @@ const InputFilterType = React.forwardRef<HTMLInputElement, IInputFilter>(
         ></input>
       </span>
     );
-  },
+  }
 );
 
 export default InputFilterType;
